@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vivian's Sewing</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <a href="index.html" class="logo">Vivian's Sewing</a>
+      <div class="header-right">
+        <a href="lookbook.html">Look Book</a>
+        <a href="blogHome.html">Blog</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!--SLIDESHOW example code by: https://www.youtube.com/watch?v=FZrHoAUkHpE&ab_channel=CleverTechie, modified with arrows and to website -->
+    <div class="pageContainer">
+      <div class="slideContainer1">
+        <span id="sliderImage1"></span>
+        <span id="sliderImage2"></span>
+        <span id="sliderImage3"></span>
+        <span id="sliderImage4"></span>
+        <div class="imageContainer1">
+          <img src="lSkirt/1.jpg" class="sliderImage" />
+          <img src="lSkirt/2.jpg" class="sliderImage" />
+          <img src="lSkirt/3.png" class="sliderImage" />
+          <img src="lSkirt/4.png" class="sliderImage" />
+        </div>
+        <div class="buttonContainer">
+          <a href="#sliderImage1" class="sliderButton"></a>
+          <a href="#sliderImage2" class="sliderButton"></a>
+          <a href="#sliderImage3" class="sliderButton"></a>
+          <a href="#sliderImage4" class="sliderButton"></a>
+        </div>
+        <div class="arrowContainer">
+          <button class="arrowButton" id="prevSlide">&lt;</button>
+          <button class="arrowButton" id="nextSlide">&gt;</button>
+        </div>
+      </div>
+
+      <!--TEXT-->
+      <div class="textClass">
+        <p class="bTitle">Ruffled Skirt</p>
+        <p class="bDesc">
+          <strong>Materials:</strong>
+          Cotton
+        </p>
+        <p class="bDesc">
+          <strong>Inspiration:</strong>
+          For this piece this is not much inspiration, I just wanted to practice
+          using a pre-made pattern.
+        </p>
+      </div>
+    </div>
+
+    <script src="slideshow.js"></script>
+  </body>
+</html>

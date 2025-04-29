@@ -1,0 +1,586 @@
+/*HEADER*/
+body {
+  margin: 0;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #503b63;
+  padding: 20px 10px;
+}
+
+.header a {
+  font-family: Arial;
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  transition: color 0.15s, text-decoration 0.15s;
+}
+
+.header a.logo {
+  font-size: 25px;
+}
+
+.header a:hover {
+  color: #d7cae0;
+}
+
+.header a:active {
+  color: #230e36;
+}
+
+.header a.active {
+  color: white;
+  text-decoration: underline;
+}
+
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/*adding background image*/
+.homeBody {
+  background-image: url("images/homeBkg.jpeg");
+  background-size: 100%;
+}
+
+/*TEXT*/
+.homeTitle {
+  font-family: Arial;
+  color: white;
+  font-size: 60px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding-top: 250px;
+  padding-left: 200px;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.homeText {
+  font-family: Arial;
+  color: white;
+  font-size: 20px;
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  padding-left: 270px;
+  width: 600px;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.homeButton {
+  margin: 0;
+  padding: 0;
+  color: #503b63;
+  background-color: white;
+  border: none;
+  width: 150px;
+  height: 50px;
+  font-size: 23px;
+  border-radius: 15px;
+  margin-left: 670px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.homeButton:hover {
+  color: white;
+  background-color: #503b63;
+}
+
+.homeButton:active {
+  color: white;
+  background-color: #362248;
+}
+
+.lookbookButton {
+  width: 300px;
+  height: 275px;
+  margin: 26px;
+  border: none;
+  background-image: url("lookbookPics/lilyJorts.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  transition: opacity 0.15s;
+}
+
+.lookbookButton:hover {
+  opacity: 0.8;
+}
+
+.lookbookButton:active {
+  opacity: 0.5;
+}
+
+/*SLIDESHOW*/
+.slideContainer1 {
+  width: 800px;
+  height: 622px;
+  margin-left: 75px;
+  margin-top: 25px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.imageContainer1 {
+  width: 3200px;
+  height: 622px;
+  position: relative;
+  transition: left 2s;
+}
+
+.imageContainer2 {
+  width: 7200px;
+  height: 622px;
+  position: relative;
+  transition: left 2s;
+}
+
+.sliderImage {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+/*trying to make the buttons white when active lily jorts*/
+#sliderImage1:target ~ .buttonContainer a[href="#sliderImage1"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage2:target ~ .buttonContainer a[href="#sliderImage2"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage3:target ~ .buttonContainer a[href="#sliderImage3"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage4:target ~ .buttonContainer a[href="#sliderImage4"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage5:target ~ .buttonContainer a[href="#sliderImage5"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage6:target ~ .buttonContainer a[href="#sliderImage6"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage7:target ~ .buttonContainer a[href="#sliderImage7"] {
+  background-color: rgba(255, 255, 255, 1);
+}
+#sliderImage8:target ~ .buttonContainer a[href="#sliderImage8"] {
+  .mySlides {
+    display: none;
+  }
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.buttonContainer {
+  top: -20px;
+  position: relative;
+}
+
+.sliderButton {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: background-color 0.15s;
+}
+
+.sliderButton:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.sliderButton:active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/*for the arrows ont the side*/
+.arrowContainer {
+  position: absolute;
+  top: 50%;
+  width: 780px;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  margin: 10px;
+}
+
+.arrowButton {
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  pointer-events: auto;
+  transition: background-color 0.15s;
+}
+
+.arrowButton:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+
+.arrowButton:active {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+#sliderImage1:target ~ .imageContainer1 {
+  left: 0px;
+}
+#sliderImage2:target ~ .imageContainer1 {
+  left: -800px;
+}
+#sliderImage3:target ~ .imageContainer1 {
+  left: -1600px;
+}
+#sliderImage4:target ~ .imageContainer1 {
+  left: -2400px;
+}
+
+/*prom*/
+#sliderImage1:target ~ .imageContainer2 {
+  left: 0px;
+}
+#sliderImage2:target ~ .imageContainer2 {
+  left: -800px;
+}
+#sliderImage3:target ~ .imageContainer2 {
+  left: -1600px;
+}
+#sliderImage4:target ~ .imageContainer2 {
+  left: -2400px;
+}
+#sliderImage5:target ~ .imageContainer2 {
+  left: -3200px;
+}
+#sliderImage6:target ~ .imageContainer2 {
+  left: -4000px;
+}
+#sliderImage7:target ~ .imageContainer2 {
+  left: -4800px;
+}
+#sliderImage8:target ~ .imageContainer2 {
+  left: -5600px;
+}
+
+img {
+  border-radius: 25px;
+}
+
+/*TEXT*/
+.textClass {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 65px;
+  text-align: center;
+  width: 30%;
+}
+
+.pageContainer {
+  display: flex;
+}
+
+.bTitle {
+  font-family: Arial;
+  color: black;
+  font-size: 40px;
+  margin: 0;
+}
+
+.bDesc {
+  font-family: Arial;
+  color: black;
+  margin: 5px;
+}
+
+/*BLOG*/
+.pageTitle {
+  font-family: Arial;
+  color: black;
+  font-size: 45px;
+  margin: 20px;
+  text-align: center;
+}
+
+.blogSiteTitle {
+  font-family: Arial;
+  color: black;
+  font-size: 35px;
+  margin: 50px;
+  margin-bottom: 0px;
+}
+
+.blogSiteDate {
+  font-family: Arial;
+  color: black;
+  font-size: 15px;
+  margin-left: 75px;
+}
+
+.blogPara {
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  margin: 75px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  line-height: 1.8;
+}
+
+.blogPara3 {
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  margin: 75px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  display: inline-block;
+  line-height: 1.8;
+}
+
+.blogPara2 {
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  margin: 75px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 45%;
+  line-height: 1.8;
+}
+
+.blogPara4 {
+  font-family: Arial;
+  color: black;
+  font-size: 20px;
+  margin: 75px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+  display: inline-block;
+  width: 45%;
+  line-height: 1.8;
+}
+
+.blogSiteImg {
+  margin-left: 95px;
+  border-radius: 15px;
+  height: 400px;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.blogSiteImg2 {
+  margin-right: 85px;
+  border-radius: 15px;
+  height: 400px;
+  display: inline-block;
+  margin-bottom: 70px;
+}
+
+.quarter {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 275px;
+}
+
+.blogContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.blogImage {
+  width: 300px;
+  height: 250px;
+  margin: 40px;
+}
+
+.blogImage2 {
+  width: 300px;
+  height: 250px;
+  margin: 40px;
+  margin-left: 0px;
+}
+
+.blogTitle {
+  font-family: Arial;
+  font-size: 25px;
+  margin: 0px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blogDesc {
+  font-family: Arial;
+  font-size: 16px;
+  color: rgb(64, 64, 64);
+}
+
+.blogText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blogButton {
+  border: solid 1px;
+  border-color: #9785a8;
+  background-color: #d1c8d9;
+  font-family: arial;
+  height: 35px;
+  width: 110px;
+  font-size: 16px;
+  border-radius: 17px;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.blogButton:hover {
+  border-color: #7f6993;
+  background-color: #b4a3c4;
+  cursor: pointer;
+}
+
+.blogButton:active {
+  border-color: #5f4577;
+  background-color: #8a6ea5;
+}
+
+.blogButtonLookbook {
+  margin-top: 20px;
+  border: solid 1px;
+  border-color: #9785a8;
+  background-color: #d1c8d9;
+  font-family: arial;
+  height: 50px;
+  width: 160px;
+  font-size: 16px;
+  border-radius: 20px;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+
+.blogButtonLookbook:hover {
+  border-color: #7f6993;
+  background-color: #b4a3c4;
+  cursor: pointer;
+}
+
+.blogButtonLookbook:active {
+  border-color: #5f4577;
+  background-color: #8a6ea5;
+}
+
+/*contact*/
+.subTitle {
+  font-family: Arial;
+  color: black;
+  font-size: 25px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px;
+  border: 1px solid #5f4577;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+input[type="submit"] {
+  background-color: #230e36;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+input[type="submit"]:hover {
+  background-color: #503b63;
+}
+
+input[type="submit"]:active {
+  background-color: #847196;
+}
+
+/* Add a background color and some padding around the form */
+.contactContainer {
+  border-radius: 10px;
+  background-color: #e2dce8;
+  padding: 20px;
+  width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+body {
+  font-family: Arial;
+}
+
+textarea {
+  font-family: Arial;
+}
+
+.youtubeVod {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.topButton {
+  background-color: #230e36;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  transition: background-color, 0.15s;
+}
+
+.topButton:hover {
+  background-color: #5f4577;
+}
+
+.topButtonDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
